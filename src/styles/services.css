@@ -1,0 +1,318 @@
+.services-page {
+  width: 100%;
+  color: var(--color-text-primary);
+}
+
+.services-container {
+  width: min(100% - 3rem, 76rem);
+  margin-inline: auto;
+}
+
+.services-hero {
+  padding: 5.5rem 0;
+  background: linear-gradient(112deg, rgba(255, 255, 255, 0.72), rgba(255, 245, 239, 0.08) 68%);
+}
+
+.services-hero__layout {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.55fr);
+  gap: 7rem;
+}
+
+.services-hero__copy {
+  max-width: 43rem;
+}
+
+.services-eyebrow {
+  margin: 0 0 1.25rem;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services-hero h1,
+.services-details h2,
+.services-bottom-cta h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.services-hero h1 {
+  max-width: 11ch;
+}
+
+.services-hero__copy > p:not(.services-eyebrow) {
+  max-width: 36rem;
+  margin: 1.5rem 0 2rem;
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.services-hero__profile {
+  position: relative;
+  padding: 2rem 0 1.5rem 2rem;
+  border-left: 1px solid rgba(117, 77, 73, 0.24);
+}
+
+.services-hero__profile-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services-hero__profile > strong {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.services-hero__profile dl {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.services-hero__profile dl div {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 0.75rem;
+}
+
+.services-hero__profile dt {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+.services-hero__profile dd {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.services-details {
+  padding: 7rem 0;
+  background: var(--color-surface);
+}
+
+.services-details__layout {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+  gap: 6rem;
+}
+
+.services-details__copy {
+  max-width: 42rem;
+}
+
+.services-details h2 {
+  max-width: 11ch;
+  font-size: 3.25rem;
+}
+
+.services-details__copy > p:not(.services-eyebrow) {
+  max-width: 37rem;
+  margin: 1.25rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.services-pending {
+  max-width: 36rem;
+  padding: 1.25rem 0 0 1.25rem;
+  margin-top: 2rem;
+  border-left: 2px solid var(--color-accent-soft);
+}
+
+.services-pending__index {
+  color: var(--color-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.services-pending h3 {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.services-pending p {
+  margin: 0.65rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+}
+
+.services-confirmed-list {
+  padding: 0;
+  margin: 2rem 0 0;
+  list-style: none;
+}
+
+.services-confirmed-list li {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.services-confirmed-list h3 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.services-confirmed-list p {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.65;
+}
+
+.services-confirmed-list img {
+  display: block;
+  width: min(100%, 28rem);
+  height: auto;
+  margin-top: 1rem;
+  border-radius: var(--radius-md);
+}
+
+.services-details__visual {
+  display: flex;
+  min-height: 25rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid rgba(117, 77, 73, 0.2);
+  border-radius: 48% 48% var(--radius-lg) var(--radius-lg);
+  background:
+    repeating-linear-gradient(45deg, transparent 0, transparent 18px, rgba(117, 77, 73, 0.035) 19px, transparent 20px),
+    linear-gradient(150deg, #fff 4%, var(--color-secondary) 100%);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.services-details__visual-index {
+  align-self: flex-start;
+  margin: 1.5rem 0 0 1.75rem;
+  color: var(--color-text-secondary);
+  font-size: 0.625rem;
+  font-weight: 700;
+}
+
+.services-details__monogram {
+  display: grid;
+  width: 6rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+}
+
+.services-details__visual p {
+  max-width: 13rem;
+  margin: 1rem 1rem 0;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.services-bottom-cta {
+  padding: 4.5rem 0;
+  background: var(--color-secondary);
+}
+
+.services-bottom-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.services-bottom-cta h2 {
+  max-width: 11ch;
+  font-size: 3rem;
+}
+
+.services-bottom-cta__inner > div:first-child > p:last-child {
+  margin: 1rem 0 0;
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 900px) {
+  .services-hero__layout,
+  .services-details__layout {
+    gap: 3rem;
+  }
+
+  .services-hero h1 {
+    font-size: 3.25rem;
+  }
+
+  .services-details h2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .services-container {
+    width: min(100% - 2rem, 76rem);
+  }
+
+  .services-hero,
+  .services-details {
+    padding-block: 4.5rem;
+  }
+
+  .services-hero__layout,
+  .services-details__layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .services-hero h1,
+  .services-details h2 {
+    font-size: 2.75rem;
+  }
+
+  .services-hero__profile {
+    max-width: 28rem;
+  }
+
+  .services-details__visual {
+    min-height: 20rem;
+  }
+
+  .services-bottom-cta__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .services-hero h1,
+  .services-details h2,
+  .services-bottom-cta h2 {
+    font-size: 2.5rem;
+  }
+
+  .services-hero__profile dl div {
+    grid-template-columns: 5.5rem 1fr;
+  }
+}
