@@ -28,6 +28,7 @@ export default function Navbar() {
             alt={business.brandName}
             fetchPriority="high"
           />
+          <span className="brand__name">{business.brandName}</span>
         </NavLink>
 
         <button
