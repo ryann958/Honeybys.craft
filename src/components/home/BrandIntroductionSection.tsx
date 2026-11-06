@@ -16,7 +16,6 @@ export default function BrandIntroductionSection() {
             />
             <DemoBadge label={demoContent.imageBadge} />
           </div>
-          <p className="home-introduction__note">Foto: {demoImages.plushCollection.photographer} / Pexels. Bukan foto studio {business.brandName}.</p>
         </div>
         <div className="home-introduction__copy">
           <p className="home-eyebrow">Tentang {business.brandName}</p>
