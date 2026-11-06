@@ -5,9 +5,9 @@ export default function WhyChooseSection() {
     <section className="home-principles" aria-labelledby="home-principles-title">
       <div className="home-container home-principles__layout">
         <div className="home-principles__intro">
-          <p className="home-eyebrow">Cara kami memulai</p>
-          <h2 id="home-principles-title">Yang penting, ide Anda didengar.</h2>
-          <p>Hal-hal yang menjadi dasar percakapan sebelum sebuah kebutuhan custom dibahas lebih jauh.</p>
+          <p className="home-eyebrow">Honeybys.craft</p>
+          <h2 id="home-principles-title">Why Choose Us?</h2>
+          <p>Pesan boneka custom satuan tanpa minimum order. Dari desain sendiri hingga karakter favorit, semuanya bisa dibahas bersama.</p>
         </div>
         <ol className="home-principles__list">
           {studioPrinciples.map((principle) => (

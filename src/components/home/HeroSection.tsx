@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { business } from '../../data/business';
 import DemoBadge from '../common/DemoBadge';
 import DemoImage from '../common/DemoImage';
-import { demoContent, demoImages } from '../../data/demoContent';
+import { demoContent } from '../../data/demoContent';
+import { customerImages } from '../../data/customerImages';
 import WhatsAppCta from './WhatsAppCta';
 
 export default function HeroSection() {
@@ -70,16 +71,16 @@ export default function HeroSection() {
             <span className="home-hero__parallax-contour" />
           </div>
           <div className="home-hero__copy-content">
-            <p className="home-eyebrow"><span /> Handmade, personal, custom</p>
-            <h1 id="home-hero-title">Dari sebuah ide, menjadi boneka yang personal.</h1>
+            <p className="home-eyebrow"><span /> Custom satuan tanpa minimum order</p>
+            <h1 id="home-hero-title">Buat boneka impianmu, mulai dari satu pesanan.</h1>
             <p className="home-hero__description">
-              {business.brandName} menghadirkan layanan custom boneka dari ide, karakter, atau referensi personal. Ceritakan konsepnya untuk dibahas bersama.
+              {business.brandName} membuat boneka custom berdasarkan desain dan karakter pilihanmu. Mau desain sendiri, anime, karakter game, idol K-pop, atau animal plushie? Ceritakan idemu kepada kami.
             </p>
             <div className="home-hero__actions">
               <WhatsAppCta>Mulai konsultasi</WhatsAppCta>
               <Link className="home-button home-button--text" to="/gallery">Lihat galeri</Link>
             </div>
-            <p className="home-hero__footnote">Kontak resmi tersedia melalui WhatsApp.</p>
+            <p className="home-hero__footnote">Pesan satuan, small batch, maupun big quantity.</p>
           </div>
         </div>
 
@@ -88,8 +89,8 @@ export default function HeroSection() {
           <div className="home-hero__photo-frame">
             <DemoImage
               className="home-hero__media"
-              src={demoImages.pinkBear.src}
-              alt={`${demoImages.pinkBear.alt} ${demoContent.disclaimer}`}
+              src={customerImages.one.src}
+              alt={customerImages.one.alt}
               loading="eager"
             />
             <div className="home-hero__photo-badges">
@@ -98,7 +99,6 @@ export default function HeroSection() {
             </div>
           </div>
           <span className="home-hero__seal" aria-hidden="true">crafted<br />with care</span>
-          <p className="home-hero__visual-note">Foto ilustrasi, bukan karya {business.brandName}.</p>
         </div>
       </div>
       <div className="home-hero__bottomline" aria-hidden="true">

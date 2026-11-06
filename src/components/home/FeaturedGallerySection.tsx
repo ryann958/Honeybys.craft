@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { business } from '../../data/business';
 import { featuredGallery } from '../../data/homepage';
 import DemoBadge from '../common/DemoBadge';
 import DemoImage from '../common/DemoImage';
@@ -15,7 +14,7 @@ export default function FeaturedGallerySection() {
             <h2 id="home-gallery-title">Inspirasi visual untuk memulai.</h2>
           </div>
           <p className="home-section-heading__aside">
-            Foto-foto ini adalah ilustrasi demo, bukan portofolio {business.brandName}. Foto karya asli belum tersedia.
+            Beberapa hasil custom kami untuk menjadi inspirasi pesananmu.
           </p>
         </div>
 
@@ -32,7 +31,6 @@ export default function FeaturedGallerySection() {
               </div>
               <figcaption>
                 <span>{item.title}</span>
-                <span className="home-gallery-item__credit">Foto: {item.image.photographer} / Pexels</span>
               </figcaption>
             </figure>
           ))}

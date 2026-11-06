@@ -50,12 +50,13 @@ export default function ServicesPage() {
                     {service.image && (
                       <img src={service.image} alt={service.imageAlt ?? ''} loading="lazy" decoding="async" />
                     )}
+                    <WhatsAppCta className="services-service-order">Order sekarang</WhatsAppCta>
                   </li>
                 ))}
               </ul>
             ) : (
               <div className="services-pending" role="status">
-                <span className="services-pending__index">01 / Konfirmasi</span>
+                <span className="services-pending__index">01 / Konsultasi</span>
                 <h3>{servicePageContent.pendingTitle}</h3>
                 <p>{servicePageContent.pendingDescription}</p>
               </div>
@@ -63,9 +64,9 @@ export default function ServicesPage() {
           </div>
 
           <div className="services-details__visual" role="img" aria-label="Placeholder visual layanan; aset resmi belum tersedia.">
-            <span className="services-details__visual-index">LAYANAN / 00</span>
+            <span className="services-details__visual-index">PRODUK / CUSTOM</span>
             <span className="services-details__monogram" aria-hidden="true">HC</span>
-            <p>Visual layanan menunggu aset resmi.</p>
+            <p>Desain sendiri, anime, karakter game, idol K-pop, atau animal plushie.</p>
           </div>
         </div>
       </section>

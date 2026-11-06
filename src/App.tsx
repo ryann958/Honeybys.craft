@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import ArticleDetailPage from './pages/ArticleDetailPage';
@@ -6,6 +7,30 @@ import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
+import { business } from './data/business';
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: business.brandName,
+  url: 'https://honeybys.craft',
+  foundingDate: String(business.establishedYear),
+  location: {
+    '@type': 'Place',
+    name: business.location,
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: `+${business.whatsappNumber}`,
+    availableLanguage: 'Indonesian',
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      description: business.operatingHours,
+    },
+  },
+  logo: 'https://honeybys.craft/assets/images/branding/honeybys-craft-logo.png',
+};
 
 function NotFoundPage() {
   return (
@@ -22,7 +47,25 @@ function NotFoundPage() {
   );
 }
 
+function useOrganizationJsonLd() {
+  useEffect(() => {
+    const id = 'jsonld-organization';
+    let script = document.getElementById(id) as HTMLScriptElement | null;
+    if (!script) {
+      script = document.createElement('script');
+      script.id = id;
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(organizationJsonLd);
+    return () => {
+      document.getElementById(id)?.remove();
+    };
+  }, []);
+}
+
 export default function App() {
+  useOrganizationJsonLd();
   return (
     <Routes>
       <Route element={<MainLayout />}>

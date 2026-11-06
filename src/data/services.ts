@@ -6,12 +6,18 @@ export type ServiceCategory = {
   imageAlt?: string;
 };
 
-export const confirmedServices: ServiceCategory[] = [];
+export const confirmedServices: ServiceCategory[] = [
+  { id: 'custom-doll', name: 'Boneka Custom', description: 'Boneka satuan tanpa minimum order, dibuat berdasarkan desain dan karakter pilihanmu.' },
+  { id: 'felt-doll', name: 'Boneka Flanel', description: 'Boneka flanel dengan detail personal untuk hadiah, koleksi, atau kebutuhan spesial.' },
+  { id: 'mascot', name: 'Maskot', description: 'Maskot custom untuk brand, komunitas, event, sekolah, dan kebutuhan promosi.' },
+  { id: 'custom-pillow', name: 'Bantal Custom', description: 'Bantal karakter dengan desain dan ukuran yang dapat disesuaikan.' },
+  { id: 'bag-pouch', name: 'Tas & Pouch', description: 'Tas dan pouch custom yang praktis, unik, dan sesuai karakter pilihanmu.' },
+];
 
 export const servicePageContent = {
-  title: 'Custom boneka, dimulai dari ide yang ingin Anda ceritakan.',
-  intro: 'Honeybys.craft berfokus pada layanan pembuatan boneka custom. Sampaikan karakter, ilustrasi, atau kebutuhan awal untuk dibahas bersama.',
-  detailIntro: 'Kategori layanan resmi belum dikonfirmasi. Detail permintaan akan dibicarakan sebelum informasi pengerjaan ditetapkan.',
-  pendingTitle: 'Daftar kategori layanan menunggu konfirmasi.',
-  pendingDescription: 'Harga, bahan, ukuran, jumlah minimum, estimasi pengerjaan, dan ketentuan layanan belum tersedia untuk ditampilkan.',
+  title: 'Layanan custom untuk setiap karakter dan cerita.',
+  intro: 'Mulai dari satu pesanan tanpa minimum order. Kami membuat boneka, maskot, bantal, tas, dan pouch berdasarkan desain pilihanmu.',
+  detailIntro: 'Kamu bisa membawa desain sendiri atau memilih inspirasi dari anime, karakter game, idol K-pop, hingga animal plushie.',
+  pendingTitle: 'Konsultasikan kebutuhanmu.',
+  pendingDescription: 'Jumlah, ukuran, bahan, dan detail pengerjaan dibahas bersama melalui WhatsApp.',
 } as const;

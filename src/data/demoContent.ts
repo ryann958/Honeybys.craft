@@ -1,7 +1,7 @@
 export const demoContent = {
-  badge: 'Konten Demo',
-  imageBadge: 'Foto Ilustrasi',
-  disclaimer: 'Konten dan foto ini hanya untuk demo visual, bukan karya aktual atau pesanan Honeybys.craft.',
+  badge: '',
+  imageBadge: '',
+  disclaimer: '',
 } as const;
 
 export const demoImageLicense = {

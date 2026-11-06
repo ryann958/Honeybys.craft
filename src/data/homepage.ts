@@ -1,28 +1,28 @@
-import { demoImages } from './demoContent';
+import { customerImages } from './customerImages';
 
 export const featuredServices = [
   {
-    name: 'Custom Character Doll',
-    description: 'Contoh kategori sementara untuk bahan pembahasan, bukan layanan yang sudah dikonfirmasi.',
-    image: demoImages.unicorn,
+    name: 'Boneka Custom',
+    description: 'Boneka satuan hingga jumlah besar berdasarkan desain dan karakter pilihanmu.',
+    image: customerImages.one,
     layout: 'portrait',
   },
   {
-    name: 'Corporate Mascot',
-    description: 'Contoh kategori sementara untuk bahan pembahasan, bukan layanan yang sudah dikonfirmasi.',
-    image: demoImages.wolfKoala,
+    name: 'Boneka Flanel & Maskot',
+    description: 'Wujudkan maskot, karakter brand, anime, game, atau idol favoritmu.',
+    image: customerImages.two,
     layout: 'landscape',
   },
   {
-    name: 'Custom Plush Pillow',
-    description: 'Contoh kategori sementara untuk bahan pembahasan, bukan layanan yang sudah dikonfirmasi.',
-    image: demoImages.plushDucks,
+    name: 'Bantal Custom',
+    description: 'Bantal karakter dengan desain, ukuran, dan detail yang bisa dipersonalisasi.',
+    image: customerImages.three,
     layout: 'portrait',
   },
   {
-    name: 'Educational Plush',
-    description: 'Contoh kategori sementara untuk bahan pembahasan, bukan layanan yang sudah dikonfirmasi.',
-    image: demoImages.plushCollection,
+    name: 'Tas & Pouch',
+    description: 'Aksesori custom yang unik untuk hadiah, koleksi, atau kebutuhan brand.',
+    image: customerImages.four,
     layout: 'landscape',
   },
 ] as const;
@@ -30,20 +30,20 @@ export const featuredServices = [
 export const featuredGallery = [
   {
     number: '01',
-    title: 'Beruang plush pink / Foto ilustrasi',
-    image: demoImages.pinkBear,
+    title: 'Boneka custom karakter',
+    image: customerImages.one,
     layout: 'tall',
   },
   {
     number: '02',
-    title: 'Boneka bebek plush / Foto ilustrasi',
-    image: demoImages.plushDucks,
+    title: 'Boneka custom handmade',
+    image: customerImages.three,
     layout: 'wide',
   },
   {
     number: '03',
-    title: 'Gajah dan hiu plush / Foto ilustrasi',
-    image: demoImages.elephantShark,
+    title: 'Koleksi custom Honeybys.craft',
+    image: customerImages.five,
     layout: 'square',
   },
 ] as const;
@@ -78,19 +78,24 @@ export const processSteps = [
 
 export const studioPrinciples = [
   {
-    number: '01',
-    title: 'Berangkat dari ide personal',
-    description: 'Karakter, ilustrasi, atau kebutuhan Anda menjadi awal pembicaraan.',
+    number: '🤎',
+    title: 'No Minimum Order',
+    description: 'Pesan satuan? Tentu bisa! Kami menerima pesanan mulai dari satu buah.',
   },
   {
-    number: '02',
-    title: 'Detail dibahas bersama',
-    description: 'Kebutuhan dan kemungkinan pengerjaan dikonfirmasi sebelum melangkah lebih jauh.',
+    number: '🧸',
+    title: 'Custom Made',
+    description: 'Dibuat berdasarkan desain dan karakter pilihanmu.',
   },
   {
-    number: '03',
-    title: 'Alur yang mudah diikuti',
-    description: 'Dari konsultasi hingga penyerahan, tahapannya dibicarakan dengan jelas.',
+    number: '🎨',
+    title: 'Personalized Design',
+    description: 'Karakter, outfit, hingga ekspresi bisa disesuaikan dengan keinginanmu.',
+  },
+  {
+    number: '📦',
+    title: 'Flexible Quantity',
+    description: 'Menerima pesanan satuan, small batch, hingga big quantity.',
   },
 ] as const;
 

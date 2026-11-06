@@ -7,18 +7,19 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-background: #fff5ef;
-  --color-secondary: #f8d8c8;
-  --color-accent-soft: #f2a995;
-  --color-accent: #e98578;
-  --color-text-primary: #754d49;
-  --color-text-secondary: #806d67;
-  --color-surface: #fff;
-  --color-border: rgba(117, 77, 73, 0.15);
-  --color-focus: #a64e43;
+  --color-background: #fff9f1;
+  --color-secondary: #ffe0b7;
+  --color-accent-soft: #f6b36d;
+  --color-accent: #ed7d32;
+  --color-text-primary: #2f211d;
+  --color-text-secondary: #705a4e;
+  --color-surface: #ffffff;
+  --color-border: rgba(47, 33, 29, 0.13);
+  --color-focus: #c95c1e;
+  --color-dark: #28201d;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+  --font-heading: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --font-body: 'Segoe UI', Tahoma, sans-serif;
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -58,13 +59,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--color-background);
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent 0,
-    transparent 23px,
-    rgba(233, 133, 120, 0.035) 24px,
-    transparent 25px
-  );
+  background-image: radial-gradient(circle at 10% 10%, rgba(246, 179, 109, 0.16), transparent 28rem), radial-gradient(circle at 90% 35%, rgba(237, 125, 50, 0.08), transparent 24rem);
 }
 
 body,
@@ -177,8 +172,9 @@ a:focus-visible {
 .site-header {
   position: relative;
   z-index: 10;
-  border-bottom: 1px solid var(--color-border);
-  background: rgba(255, 245, 239, 0.94);
+  border-bottom: 1px solid rgba(47, 33, 29, 0.08);
+  background: rgba(255, 249, 241, 0.94);
+  backdrop-filter: blur(14px);
 }
 
 .site-header__inner,
@@ -189,7 +185,7 @@ a:focus-visible {
 
 .site-header__inner {
   display: flex;
-  min-height: 6rem;
+  min-height: 4.75rem;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-8);
@@ -205,8 +201,8 @@ a:focus-visible {
 .brand__logo {
   display: block;
   width: auto;
-  height: 4.75rem;
-  max-width: 9.5rem;
+  height: 3.6rem;
+  max-width: 9rem;
   object-fit: contain;
   object-position: left center;
 }
@@ -244,7 +240,8 @@ a:focus-visible {
 .site-footer__brand {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .brand__name span {
@@ -254,26 +251,27 @@ a:focus-visible {
 .primary-navigation {
   display: flex;
   align-items: center;
-  gap: clamp(var(--space-4), 2.3vw, var(--space-8));
+  gap: clamp(1rem, 2vw, 2rem);
 }
 
 .primary-navigation__link {
   position: relative;
-  padding-block: var(--space-2);
+  padding: 0.55rem 0.15rem;
   color: var(--color-text-secondary);
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
   transition: color 160ms ease;
 }
 
 .primary-navigation__link::after {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  right: 0.15rem;
+  bottom: 0.15rem;
+  left: 0.15rem;
   height: 2px;
   transform: scaleX(0);
   transform-origin: left;
+  border-radius: var(--radius-pill);
   background: var(--color-accent);
   content: '';
   transition: transform 160ms ease;
@@ -386,8 +384,9 @@ a:focus-visible {
 }
 
 .site-footer {
-  border-top: 1px solid var(--color-border);
-  background: rgba(248, 216, 200, 0.42);
+  border-top: 0;
+  color: #fff8ef;
+  background: var(--color-dark);
 }
 
 .site-footer__inner {
@@ -409,7 +408,7 @@ a:focus-visible {
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-2) var(--space-5);
-  color: var(--color-text-secondary);
+  color: rgba(255, 248, 239, 0.72);
   font-size: 0.8125rem;
 }
 
@@ -420,7 +419,7 @@ a:focus-visible {
 .site-footer__copyright {
   flex-shrink: 0;
   margin: 0;
-  color: var(--color-text-secondary);
+  color: rgba(255, 248, 239, 0.62);
   font-size: 0.75rem;
 }
 
@@ -430,12 +429,12 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 0.65rem 1rem;
-  border-top: 1px solid rgba(117, 77, 73, 0.1);
+  border-top: 1px solid rgba(255, 248, 239, 0.12);
   text-align: center;
 }
 
 .site-footer__credit a {
-  color: var(--color-text-secondary);
+  color: rgba(255, 248, 239, 0.56);
   font-size: 0.6875rem;
   transition: color 160ms ease;
 }
@@ -660,4 +659,90 @@ a:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3,
+.services-page h1,
+.services-page h2,
+.services-page h3,
+.gallery-page h1,
+.gallery-page h2,
+.gallery-page h3,
+.contact-page h1,
+.contact-page h2,
+.articles-page h1,
+.articles-page h2,
+.articles-page h3,
+.article-detail h1,
+.article-detail h2,
+.page-placeholder h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.home-button,
+.whatsapp-button,
+.gallery-filter--active {
+  border-radius: var(--radius-pill);
+}
+
+.home-button--primary,
+.whatsapp-button,
+.gallery-filter--active {
+  color: #fff;
+  background: var(--color-accent);
+  box-shadow: 0 10px 24px rgba(237, 125, 50, 0.24);
+}
+
+.home-button--primary:hover:not(:disabled),
+.whatsapp-button:hover {
+  background: #d96722;
+}
+
+.home-hero,
+.services-hero,
+.gallery-hero,
+.contact-hero,
+.articles-hero {
+  background: linear-gradient(135deg, #fff9f1 0%, #ffe9cf 100%);
+}
+
+.home-services,
+.home-gallery,
+.services-details,
+.gallery-work,
+.contact-information,
+.articles-list {
+  background: var(--color-surface);
+}
+
+.home-service__visual,
+.home-gallery-item__visual,
+.gallery-item__image-button,
+.article-card__image,
+.articles-featured__visual,
+.contact-hero__photo,
+.home-hero__media {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 14px 34px rgba(77, 48, 34, 0.12);
+}
+
+.home-final-cta,
+.services-bottom-cta,
+.gallery-cta,
+.contact-cta,
+.article-detail__cta {
+  color: #fff8ef;
+  background: linear-gradient(115deg, #ed7d32, #c95724);
+}
+
+.home-final-cta p,
+.services-bottom-cta p,
+.gallery-cta p,
+.contact-cta p,
+.article-detail__cta p {
+  color: rgba(255, 248, 239, 0.82);
 }

@@ -25,10 +25,9 @@ export default function Navbar() {
           <img
             className="brand__logo"
             src="/assets/images/branding/honeybys-craft-logo.png"
-            alt=""
+            alt={business.brandName}
             fetchPriority="high"
           />
-          <span className="brand__name">{business.brandName}</span>
         </NavLink>
 
         <button

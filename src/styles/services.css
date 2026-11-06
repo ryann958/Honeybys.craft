@@ -180,6 +180,16 @@
   line-height: 1.65;
 }
 
+.services-service-order {
+  margin-top: 1rem;
+}
+
+.services-service-order .home-button {
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.75rem;
+}
+
 .services-confirmed-list img {
   display: block;
   width: min(100%, 28rem);

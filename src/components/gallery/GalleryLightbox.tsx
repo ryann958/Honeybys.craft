@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import type { GalleryLightboxContent } from '../../data/gallery';
-import DemoBadge from '../common/DemoBadge';
 import DemoImage from '../common/DemoImage';
 
 type GalleryLightboxProps = {
@@ -55,7 +54,7 @@ export default function GalleryLightbox({ item, onClose }: GalleryLightboxProps)
       >
         <header className="gallery-lightbox__header">
           <div>
-            <p className="gallery-eyebrow">{item.kind === 'image' ? 'Foto karya' : 'Status aset'}</p>
+            <p className="gallery-eyebrow">{item.kind === 'image' ? 'Karya custom' : 'Galeri'}</p>
             <h2 id="gallery-lightbox-title">{item.title}</h2>
           </div>
           <button ref={closeButtonRef} className="gallery-lightbox__close" type="button" aria-label="Tutup lightbox" onClick={onClose}>
@@ -66,7 +65,6 @@ export default function GalleryLightbox({ item, onClose }: GalleryLightboxProps)
         {item.kind === 'image' ? (
           <div className="gallery-lightbox__image-wrap">
             <DemoImage className="gallery-lightbox__image-frame" imageClassName="gallery-lightbox__image" src={item.src} alt={item.alt} loading="eager" />
-            <DemoBadge label="Foto Ilustrasi / Konten Demo" />
           </div>
         ) : (
           <div className="gallery-lightbox__placeholder" role="img" aria-label={item.alt}>

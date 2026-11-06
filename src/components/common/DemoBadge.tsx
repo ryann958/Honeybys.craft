@@ -5,5 +5,6 @@ type DemoBadgeProps = {
 };
 
 export default function DemoBadge({ label = demoContent.badge }: DemoBadgeProps) {
+  if (!label) return null;
   return <span className="demo-badge">{label}</span>;
 }

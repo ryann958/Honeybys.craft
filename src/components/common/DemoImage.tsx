@@ -24,9 +24,9 @@ export default function DemoImage({
   return (
     <span className={`demo-image ${className}`.trim()}>
       {hasError ? (
-        <span className="demo-image__fallback" role="img" aria-label={`${alt} Foto ilustrasi demo tidak tersedia.`}>
+        <span className="demo-image__fallback" role="img" aria-label={`${alt} Gambar tidak tersedia.`}>
           <span className="demo-image__fallback-mark" aria-hidden="true">HC</span>
-          <span>Foto Ilustrasi / tidak tersedia</span>
+          <span>Gambar tidak tersedia</span>
         </span>
       ) : (
         <img

@@ -14,7 +14,7 @@ export default function FeaturedServicesSection() {
             <h2 id="home-services-title">Satu ide, banyak kemungkinan.</h2>
           </div>
           <p className="home-section-heading__aside">
-            Contoh kategori sementara dari PRD, bukan daftar layanan resmi. Kategori dan ketersediaannya perlu dikonfirmasi.
+            Terima custom satuan tanpa minimum order. Pilih produk dan karakter yang ingin kamu wujudkan bersama kami.
           </p>
         </div>
 
@@ -33,7 +33,6 @@ export default function FeaturedServicesSection() {
                 <span className="home-service__meta">Kategori sementara / 0{index + 1}</span>
                 <h3>{service.name}</h3>
                 <p>{service.description}</p>
-                <span className="home-service__credit">Foto: {service.image.photographer} / Pexels</span>
                 <span className="home-service__arrow" aria-hidden="true">Lihat detail</span>
               </Link>
             </article>
