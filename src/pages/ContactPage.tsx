@@ -35,7 +35,6 @@ export default function ContactPage() {
               <DemoBadge label={demoContent.imageBadge} />
               <DemoBadge />
             </div>
-            <figcaption>Foto: {demoImages.pinkBear.photographer} / Pexels. Bukan hasil karya {business.brandName}.</figcaption>
           </figure>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function GalleryEmptyState({ onPreview }: GalleryEmptyStateProps)
       <div className="gallery-empty-state__copy">
         <p className="gallery-eyebrow">Belum ada aset karya</p>
         <h3>Foto karya asli akan ditambahkan setelah tersedia.</h3>
-        <p>Belum ada gambar portofolio terverifikasi. Preview ini hanya menunjukkan status aset dan bukan hasil karya Honeybys.craft.</p>
+        <p>Lihat inspirasi karya custom Honeybys.craft.</p>
         <button className="gallery-empty-state__text-button" type="button" onClick={onPreview}>
           Lihat status placeholder
         </button>

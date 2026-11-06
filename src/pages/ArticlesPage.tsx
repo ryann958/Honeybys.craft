@@ -45,7 +45,6 @@ export default function ArticlesPage() {
                 <h2>{featuredArticle.title}</h2>
                 <p>{featuredArticle.excerpt}</p>
                 <span className="articles-featured__read">Baca artikel demo</span>
-                <span className="articles-photo-credit">Foto: {featuredArticle.cover.photographer} / Pexels</span>
               </div>
             </Link>
           </div>
@@ -59,7 +58,7 @@ export default function ArticlesPage() {
               <p className="articles-eyebrow">Semua tulisan</p>
               <h2 id="articles-list-title">Ide untuk dibawa ke konsultasi.</h2>
             </div>
-            <p>Label demo ditampilkan pada setiap artikel dan foto ilustrasi.</p>
+            <p>Temukan ide dan referensi untuk kebutuhan custommu.</p>
           </div>
           <div className="articles-grid">
             {otherArticles.map((article) => (
@@ -78,7 +77,6 @@ export default function ArticlesPage() {
                     <h3>{article.title}</h3>
                     <p>{article.excerpt}</p>
                     <span className="article-card__read">Baca artikel</span>
-                    <span className="articles-photo-credit">Foto: {article.cover.photographer} / Pexels</span>
                   </div>
                 </Link>
               </article>

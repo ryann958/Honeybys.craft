@@ -46,7 +46,6 @@ export default function ArticleDetailPage() {
 
       <figure className="article-detail__cover articles-container">
         <DemoImage className="article-detail__cover-image" src={article.cover.src} alt={`${article.cover.alt} ${demoContent.disclaimer}`} loading="eager" />
-        <figcaption>Foto ilustrasi: {article.cover.photographer} / Pexels. Bukan hasil karya {business.brandName}.</figcaption>
       </figure>
 
       <article className="article-detail__body">
